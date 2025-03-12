@@ -15,7 +15,7 @@ Una aplicación web que muestra un pequeño dashboard utilizando React en el fro
 
 ```bash
 git clone https://github.com/ObscureMosquito/Prueba-React.git
-cd prueba-react/react-prueba
+cd React-Prueba/react-prueba
 npm install
 cd ../fastapi-auth
 pip install -r requirements.txt
