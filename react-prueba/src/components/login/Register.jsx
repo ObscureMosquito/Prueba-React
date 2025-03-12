@@ -34,13 +34,11 @@ const Register = () => {
 
   return (
     <div className="relative flex items-center justify-center min-h-screen bg-gradient-to-br from-[rgba(27,57,105,0.9)] to-[rgba(70,14,126,0.61)] p-6">
-      {/* ✅ Reusable Starry Background */}
       <StarsBackground numStars={50} />
 
-      {/* Registration Form */}
       <div className="relative w-[350px] max-w-full backdrop-blur-lg backdrop-saturate-150 bg-gray-200/20 border border-white/20 shadow-[inset_0.5px_1px_1px_rgba(255,255,255,0.125)] rounded-lg p-6 text-center z-10">
         <h2 className="text-3xl font-bold text-white">Sign Up</h2>
-        <p className="text-gray-300 mt-2">Join the adventure! Create your account.</p>
+        <p className="text-gray-300 mt-2">Create your account.</p>
 
         {error && <div className="bg-red-100 text-red-700 p-3 rounded-md mt-3 text-sm">{error}</div>}
 

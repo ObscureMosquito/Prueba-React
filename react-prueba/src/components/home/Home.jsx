@@ -90,12 +90,21 @@ const Home = () => {
       <motion.div style={{ minHeight: "100vh" }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
         <StarsBackground numStars={isNight ? 50 : 0} />
         <AppBar position="static" color="transparent" sx={{ boxShadow: "none" }}>
-          <Toolbar sx={{ flexWrap: "wrap" }}>
-            <Button sx={{ color: "white", mb: { xs: 1, sm: 0 } }} startIcon={<LogoutIcon />}>
-              Logout
-            </Button>
-          </Toolbar>
-        </AppBar>
+        <Toolbar sx={{ display: "flex", justifyContent: "space-between", width: "100%" }}>
+          
+          <Typography variant="h6" sx={{ color: "white" }}>
+            {user?.email ? `Logged in as: ${user.email}` : "Welcome!"}
+          </Typography>
+
+          <Button 
+            sx={{ color: "white" }} 
+            startIcon={<LogoutIcon />} 
+            onClick={logout}
+          >
+            Logout
+          </Button>
+        </Toolbar>
+      </AppBar>
         <Container sx={{ textAlign: "center", pt: 5 }}>
           {loading ? (
             <CircularProgress color="inherit" />
